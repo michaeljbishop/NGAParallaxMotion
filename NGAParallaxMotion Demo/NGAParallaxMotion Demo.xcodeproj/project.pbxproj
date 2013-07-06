@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA33B3BD17864DAB0009E5C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA33B3BC17864DAB0009E5C3 /* Foundation.framework */; };
+		AA33B3BF17864DAB0009E5C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA33B3BE17864DAB0009E5C3 /* CoreGraphics.framework */; };
+		AA33B3C117864DAB0009E5C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA33B3C017864DAB0009E5C3 /* UIKit.framework */; };
+		AA33B3C717864DAB0009E5C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA33B3C517864DAB0009E5C3 /* InfoPlist.strings */; };
+		AA33B3C917864DAB0009E5C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33B3C817864DAB0009E5C3 /* main.m */; };
+		AA33B3CD17864DAB0009E5C3 /* NGAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33B3CC17864DAB0009E5C3 /* NGAAppDelegate.m */; };
+		AA33B3D017864DAB0009E5C3 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA33B3CE17864DAB0009E5C3 /* Main_iPhone.storyboard */; };
+		AA33B3D617864DAB0009E5C3 /* NGAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33B3D517864DAB0009E5C3 /* NGAViewController.m */; };
+		AA33B3D817864DAB0009E5C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA33B3D717864DAB0009E5C3 /* Images.xcassets */; };
+		AA33B3DF17864DAB0009E5C3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA33B3DE17864DAB0009E5C3 /* XCTest.framework */; };
+		AA33B3E017864DAB0009E5C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA33B3BC17864DAB0009E5C3 /* Foundation.framework */; };
+		AA33B3E117864DAB0009E5C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA33B3C017864DAB0009E5C3 /* UIKit.framework */; };
+		AA33B3E917864DAB0009E5C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA33B3E717864DAB0009E5C3 /* InfoPlist.strings */; };
+		AA33B3EB17864DAB0009E5C3 /* NGAParallaxMotion_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33B3EA17864DAB0009E5C3 /* NGAParallaxMotion_DemoTests.m */; };
+		AA33B3F617864DD20009E5C3 /* UIView+NGAParallaxMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33B3F417864DD20009E5C3 /* UIView+NGAParallaxMotion.m */; };
+		AA33B3F717864DD20009E5C3 /* UIView+NGAParallaxMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33B3F417864DD20009E5C3 /* UIView+NGAParallaxMotion.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA33B3E217864DAB0009E5C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA33B3B117864DAB0009E5C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA33B3B817864DAB0009E5C3;
+			remoteInfo = "NGAParallaxMotion Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA33B3B917864DAB0009E5C3 /* NGAParallaxMotion Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NGAParallaxMotion Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA33B3BC17864DAB0009E5C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AA33B3BE17864DAB0009E5C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AA33B3C017864DAB0009E5C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AA33B3C417864DAB0009E5C3 /* NGAParallaxMotion Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NGAParallaxMotion Demo-Info.plist"; sourceTree = "<group>"; };
+		AA33B3C617864DAB0009E5C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AA33B3C817864DAB0009E5C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA33B3CA17864DAB0009E5C3 /* NGAParallaxMotion Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NGAParallaxMotion Demo-Prefix.pch"; sourceTree = "<group>"; };
+		AA33B3CB17864DAB0009E5C3 /* NGAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGAAppDelegate.h; sourceTree = "<group>"; };
+		AA33B3CC17864DAB0009E5C3 /* NGAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGAAppDelegate.m; sourceTree = "<group>"; };
+		AA33B3CF17864DAB0009E5C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		AA33B3D417864DAB0009E5C3 /* NGAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGAViewController.h; sourceTree = "<group>"; };
+		AA33B3D517864DAB0009E5C3 /* NGAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGAViewController.m; sourceTree = "<group>"; };
+		AA33B3D717864DAB0009E5C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AA33B3DD17864DAB0009E5C3 /* NGAParallaxMotion DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NGAParallaxMotion DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA33B3DE17864DAB0009E5C3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AA33B3E617864DAB0009E5C3 /* NGAParallaxMotion DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NGAParallaxMotion DemoTests-Info.plist"; sourceTree = "<group>"; };
+		AA33B3E817864DAB0009E5C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AA33B3EA17864DAB0009E5C3 /* NGAParallaxMotion_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGAParallaxMotion_DemoTests.m; sourceTree = "<group>"; };
+		AA33B3F417864DD20009E5C3 /* UIView+NGAParallaxMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+NGAParallaxMotion.m"; path = "../UIView+NGAParallaxMotion.m"; sourceTree = "<group>"; };
+		AA33B3F517864DD20009E5C3 /* UIView+NGAParallaxMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+NGAParallaxMotion.h"; path = "../UIView+NGAParallaxMotion.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA33B3B617864DAB0009E5C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA33B3BF17864DAB0009E5C3 /* CoreGraphics.framework in Frameworks */,
+				AA33B3C117864DAB0009E5C3 /* UIKit.framework in Frameworks */,
+				AA33B3BD17864DAB0009E5C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA33B3DA17864DAB0009E5C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA33B3DF17864DAB0009E5C3 /* XCTest.framework in Frameworks */,
+				AA33B3E117864DAB0009E5C3 /* UIKit.framework in Frameworks */,
+				AA33B3E017864DAB0009E5C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA33B3B017864DAB0009E5C3 = {
+			isa = PBXGroup;
+			children = (
+				AA33B3F417864DD20009E5C3 /* UIView+NGAParallaxMotion.m */,
+				AA33B3F517864DD20009E5C3 /* UIView+NGAParallaxMotion.h */,
+				AA33B3C217864DAB0009E5C3 /* App */,
+				AA33B3E417864DAB0009E5C3 /* NGAParallaxMotion DemoTests */,
+				AA33B3BB17864DAB0009E5C3 /* Frameworks */,
+				AA33B3BA17864DAB0009E5C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA33B3BA17864DAB0009E5C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA33B3B917864DAB0009E5C3 /* NGAParallaxMotion Demo.app */,
+				AA33B3DD17864DAB0009E5C3 /* NGAParallaxMotion DemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA33B3BB17864DAB0009E5C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA33B3BC17864DAB0009E5C3 /* Foundation.framework */,
+				AA33B3BE17864DAB0009E5C3 /* CoreGraphics.framework */,
+				AA33B3C017864DAB0009E5C3 /* UIKit.framework */,
+				AA33B3DE17864DAB0009E5C3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA33B3C217864DAB0009E5C3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AA33B3CB17864DAB0009E5C3 /* NGAAppDelegate.h */,
+				AA33B3CC17864DAB0009E5C3 /* NGAAppDelegate.m */,
+				AA33B3CE17864DAB0009E5C3 /* Main_iPhone.storyboard */,
+				AA33B3D417864DAB0009E5C3 /* NGAViewController.h */,
+				AA33B3D517864DAB0009E5C3 /* NGAViewController.m */,
+				AA33B3D717864DAB0009E5C3 /* Images.xcassets */,
+				AA33B3C317864DAB0009E5C3 /* Supporting Files */,
+			);
+			name = App;
+			path = "NGAParallaxMotion Demo";
+			sourceTree = "<group>";
+		};
+		AA33B3C317864DAB0009E5C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA33B3C417864DAB0009E5C3 /* NGAParallaxMotion Demo-Info.plist */,
+				AA33B3C517864DAB0009E5C3 /* InfoPlist.strings */,
+				AA33B3C817864DAB0009E5C3 /* main.m */,
+				AA33B3CA17864DAB0009E5C3 /* NGAParallaxMotion Demo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA33B3E417864DAB0009E5C3 /* NGAParallaxMotion DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA33B3EA17864DAB0009E5C3 /* NGAParallaxMotion_DemoTests.m */,
+				AA33B3E517864DAB0009E5C3 /* Supporting Files */,
+			);
+			path = "NGAParallaxMotion DemoTests";
+			sourceTree = "<group>";
+		};
+		AA33B3E517864DAB0009E5C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA33B3E617864DAB0009E5C3 /* NGAParallaxMotion DemoTests-Info.plist */,
+				AA33B3E717864DAB0009E5C3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA33B3B817864DAB0009E5C3 /* NGAParallaxMotion Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA33B3EE17864DAB0009E5C3 /* Build configuration list for PBXNativeTarget "NGAParallaxMotion Demo" */;
+			buildPhases = (
+				AA33B3B517864DAB0009E5C3 /* Sources */,
+				AA33B3B617864DAB0009E5C3 /* Frameworks */,
+				AA33B3B717864DAB0009E5C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NGAParallaxMotion Demo";
+			productName = "NGAParallaxMotion Demo";
+			productReference = AA33B3B917864DAB0009E5C3 /* NGAParallaxMotion Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA33B3DC17864DAB0009E5C3 /* NGAParallaxMotion DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA33B3F117864DAB0009E5C3 /* Build configuration list for PBXNativeTarget "NGAParallaxMotion DemoTests" */;
+			buildPhases = (
+				AA33B3D917864DAB0009E5C3 /* Sources */,
+				AA33B3DA17864DAB0009E5C3 /* Frameworks */,
+				AA33B3DB17864DAB0009E5C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA33B3E317864DAB0009E5C3 /* PBXTargetDependency */,
+			);
+			name = "NGAParallaxMotion DemoTests";
+			productName = "NGAParallaxMotion DemoTests";
+			productReference = AA33B3DD17864DAB0009E5C3 /* NGAParallaxMotion DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA33B3B117864DAB0009E5C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NGA;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Numerical Garden";
+				TargetAttributes = {
+					AA33B3DC17864DAB0009E5C3 = {
+						TestTargetID = AA33B3B817864DAB0009E5C3;
+					};
+				};
+			};
+			buildConfigurationList = AA33B3B417864DAB0009E5C3 /* Build configuration list for PBXProject "NGAParallaxMotion Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA33B3B017864DAB0009E5C3;
+			productRefGroup = AA33B3BA17864DAB0009E5C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA33B3B817864DAB0009E5C3 /* NGAParallaxMotion Demo */,
+				AA33B3DC17864DAB0009E5C3 /* NGAParallaxMotion DemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA33B3B717864DAB0009E5C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA33B3D817864DAB0009E5C3 /* Images.xcassets in Resources */,
+				AA33B3D017864DAB0009E5C3 /* Main_iPhone.storyboard in Resources */,
+				AA33B3C717864DAB0009E5C3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA33B3DB17864DAB0009E5C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA33B3E917864DAB0009E5C3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA33B3B517864DAB0009E5C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA33B3C917864DAB0009E5C3 /* main.m in Sources */,
+				AA33B3D617864DAB0009E5C3 /* NGAViewController.m in Sources */,
+				AA33B3F617864DD20009E5C3 /* UIView+NGAParallaxMotion.m in Sources */,
+				AA33B3CD17864DAB0009E5C3 /* NGAAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA33B3D917864DAB0009E5C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA33B3F717864DD20009E5C3 /* UIView+NGAParallaxMotion.m in Sources */,
+				AA33B3EB17864DAB0009E5C3 /* NGAParallaxMotion_DemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA33B3E317864DAB0009E5C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA33B3B817864DAB0009E5C3 /* NGAParallaxMotion Demo */;
+			targetProxy = AA33B3E217864DAB0009E5C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA33B3C517864DAB0009E5C3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA33B3C617864DAB0009E5C3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AA33B3CE17864DAB0009E5C3 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA33B3CF17864DAB0009E5C3 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		AA33B3E717864DAB0009E5C3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA33B3E817864DAB0009E5C3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA33B3EC17864DAB0009E5C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA33B3ED17864DAB0009E5C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA33B3EF17864DAB0009E5C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NGAParallaxMotion Demo/NGAParallaxMotion Demo-Prefix.pch";
+				INFOPLIST_FILE = "NGAParallaxMotion Demo/NGAParallaxMotion Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AA33B3F017864DAB0009E5C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NGAParallaxMotion Demo/NGAParallaxMotion Demo-Prefix.pch";
+				INFOPLIST_FILE = "NGAParallaxMotion Demo/NGAParallaxMotion Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AA33B3F217864DAB0009E5C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NGAParallaxMotion Demo.app/NGAParallaxMotion Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NGAParallaxMotion Demo/NGAParallaxMotion Demo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NGAParallaxMotion DemoTests/NGAParallaxMotion DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AA33B3F317864DAB0009E5C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NGAParallaxMotion Demo.app/NGAParallaxMotion Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode5-DP2.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NGAParallaxMotion Demo/NGAParallaxMotion Demo-Prefix.pch";
+				INFOPLIST_FILE = "NGAParallaxMotion DemoTests/NGAParallaxMotion DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA33B3B417864DAB0009E5C3 /* Build configuration list for PBXProject "NGAParallaxMotion Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA33B3EC17864DAB0009E5C3 /* Debug */,
+				AA33B3ED17864DAB0009E5C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA33B3EE17864DAB0009E5C3 /* Build configuration list for PBXNativeTarget "NGAParallaxMotion Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA33B3EF17864DAB0009E5C3 /* Debug */,
+				AA33B3F017864DAB0009E5C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA33B3F117864DAB0009E5C3 /* Build configuration list for PBXNativeTarget "NGAParallaxMotion DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA33B3F217864DAB0009E5C3 /* Debug */,
+				AA33B3F317864DAB0009E5C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA33B3B117864DAB0009E5C3 /* Project object */;
+}

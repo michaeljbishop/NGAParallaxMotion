@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>628FF67F-53CA-4808-8748-5F7D7AA0931E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NGAParallaxMotion Demo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>90B6A928-CA09-4709-9E41-221BAC14834E</key>
+		<string>https://github.com/michaeljbishop/UIView-NGAParallaxMotion.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NGAParallaxMotion Demo/NGAParallaxMotion Demo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>90B6A928-CA09-4709-9E41-221BAC14834E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/michaeljbishop/UIView-NGAParallaxMotion.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>90B6A928-CA09-4709-9E41-221BAC14834E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>90B6A928-CA09-4709-9E41-221BAC14834E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UIView-NGAParallaxMotion</string>
+		</dict>
+	</array>
+</dict>
+</plist>

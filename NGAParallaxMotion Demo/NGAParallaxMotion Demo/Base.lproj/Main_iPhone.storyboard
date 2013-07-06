@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4457.9" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.9"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="NGAViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="SrY-Z1-5yR">
+                                <rect key="frame" x="20" y="225" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5v-N0-qcA">
+                                <rect key="frame" x="20" y="246" width="280" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yF-tQ-0e0">
+                                <rect key="frame" x="20" y="266" width="280" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPm-IZ-zv6">
+                                <rect key="frame" x="20" y="296" width="280" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="45"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JS4-xm-JM6">
+                                <rect key="frame" x="20" y="342" width="280" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="cYt-Nc-80g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="67"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Crt-Nj-Blc">
+                                <rect key="frame" x="136" y="479" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="toggleParallax:" destination="vXZ-lx-hvc" eventType="valueChanged" id="0Om-0T-5H2"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="SrY-Z1-5yR" secondAttribute="centerX" id="0T1-12-V1y"/>
+                            <constraint firstItem="s5v-N0-qcA" firstAttribute="top" secondItem="SrY-Z1-5yR" secondAttribute="bottom" id="383-RR-ZGi"/>
+                            <constraint firstAttribute="trailing" secondItem="SrY-Z1-5yR" secondAttribute="trailing" constant="20" id="3G1-XU-K8F"/>
+                            <constraint firstItem="5yF-tQ-0e0" firstAttribute="centerX" secondItem="sPm-IZ-zv6" secondAttribute="centerX" id="3wp-9p-oiO"/>
+                            <constraint firstItem="JS4-xm-JM6" firstAttribute="centerX" secondItem="sPm-IZ-zv6" secondAttribute="centerX" id="B71-4l-ker"/>
+                            <constraint firstAttribute="centerX" secondItem="s5v-N0-qcA" secondAttribute="centerX" id="Bw4-Lb-QlB"/>
+                            <constraint firstItem="sPm-IZ-zv6" firstAttribute="top" secondItem="s5v-N0-qcA" secondAttribute="bottom" constant="26" id="CKm-AP-AUA"/>
+                            <constraint firstItem="sPm-IZ-zv6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="EVc-lU-MSG"/>
+                            <constraint firstAttribute="centerX" secondItem="5yF-tQ-0e0" secondAttribute="centerX" id="IIK-gK-ge9"/>
+                            <constraint firstItem="SrY-Z1-5yR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="JKS-Wy-p5p"/>
+                            <constraint firstItem="SrY-Z1-5yR" firstAttribute="centerX" secondItem="s5v-N0-qcA" secondAttribute="centerX" id="NKV-Cg-2bV"/>
+                            <constraint firstAttribute="bottom" secondItem="5yF-tQ-0e0" secondAttribute="bottom" constant="266" id="PMV-zg-Q2s"/>
+                            <constraint firstItem="s5v-N0-qcA" firstAttribute="centerX" secondItem="5yF-tQ-0e0" secondAttribute="centerX" id="Ppo-kL-shu"/>
+                            <constraint firstAttribute="centerX" secondItem="sPm-IZ-zv6" secondAttribute="centerX" id="SXc-9z-t5I"/>
+                            <constraint firstItem="JS4-xm-JM6" firstAttribute="top" secondItem="5yF-tQ-0e0" secondAttribute="bottom" constant="40" id="WO5-5J-XtC"/>
+                            <constraint firstAttribute="trailing" secondItem="JS4-xm-JM6" secondAttribute="trailing" constant="20" id="ZG5-jI-zJK"/>
+                            <constraint firstAttribute="trailing" secondItem="sPm-IZ-zv6" secondAttribute="trailing" constant="20" id="baC-Sf-7vX"/>
+                            <constraint firstAttribute="bottom" secondItem="Crt-Nj-Blc" secondAttribute="bottom" constant="58" id="cT2-u7-eLn"/>
+                            <constraint firstItem="JS4-xm-JM6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="eil-M1-Qds"/>
+                            <constraint firstItem="s5v-N0-qcA" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="246" id="inF-A3-UDx"/>
+                            <constraint firstItem="5yF-tQ-0e0" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="266" id="loa-9S-NjO"/>
+                            <constraint firstAttribute="centerX" secondItem="JS4-xm-JM6" secondAttribute="centerX" id="mN6-sf-oSZ"/>
+                            <constraint firstAttribute="centerX" secondItem="Crt-Nj-Blc" secondAttribute="centerX" constant="-0.5" id="oMu-UU-DWX"/>
+                            <constraint firstAttribute="trailing" secondItem="s5v-N0-qcA" secondAttribute="trailing" constant="20" id="qju-V3-5JV"/>
+                            <constraint firstItem="s5v-N0-qcA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="twQ-5W-bZz"/>
+                            <constraint firstAttribute="trailing" secondItem="5yF-tQ-0e0" secondAttribute="trailing" constant="20" id="woh-ef-DjG"/>
+                            <constraint firstItem="5yF-tQ-0e0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="xON-S9-hjq"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="midLabel" destination="5yF-tQ-0e0" id="JFC-Oa-5Vv"/>
+                        <outlet property="parallaxSwitch" destination="Crt-Nj-Blc" id="kHi-Kf-3bN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NGAViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NGAViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toggleParallax:"/>
+                <relationship kind="outlet" name="midLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="parallaxSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
