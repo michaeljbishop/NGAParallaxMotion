@@ -11,9 +11,10 @@
 
 @interface NGAViewController ()
 
-@property (strong, nonatomic) IBOutlet UISwitch *parallaxSwitch;
-@property (strong, nonatomic) IBOutlet UILabel *midLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *parallaxSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *midLabel;
 @property (strong, nonatomic) NSArray * labels;
+@property (weak, nonatomic) IBOutlet UIImageView *background;
 @end
 
 @implementation NGAViewController
@@ -44,12 +45,14 @@
     UISwitch * uisswitch = (UISwitch*)sender;
     if (uisswitch.isOn)
     {
+        self.background.parallaxIntensity = -20;
         CGFloat baseFontSize = self.midLabel.font.pointSize;
         for (UILabel * label in self.labels)
             label.parallaxIntensity = label.font.pointSize - baseFontSize;
     }
     else
     {
+        self.background.parallaxIntensity = 0;
         for (UILabel * label in self.labels)
             label.parallaxIntensity = 0.0;
     }
