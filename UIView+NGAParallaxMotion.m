@@ -6,6 +6,7 @@
 //
 
 #import "UIView+NGAParallaxMotion.h"
+#import "MWInterpollationMotionEffect.h"
 #import <objc/runtime.h>
 
 static const NSString * kNGAParallaxDepthKey = @"kNGAParallaxDepthKey";
@@ -34,17 +35,12 @@ static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionE
         [self nga_setParallaxMotionEffectGroup:parallaxGroup];
         [self addMotionEffect:parallaxGroup];
     }
-    
-    UIInterpolatingMotionEffect *xAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
-    UIInterpolatingMotionEffect *yAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
-    
+  
+    MWInterpollationMotionEffect *xAxis = [[MWInterpollationMotionEffect alloc] initWithKeyPath:@"center.x" interpollationIntensity:parallaxDepth type:MWInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    MWInterpollationMotionEffect *yAxis = [[MWInterpollationMotionEffect alloc] initWithKeyPath:@"center.y" interpollationIntensity:parallaxDepth type:MWInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+  
     NSArray * motionEffects = @[xAxis, yAxis];
 
-    for (UIInterpolatingMotionEffect * motionEffect in motionEffects )
-    {
-        motionEffect.maximumRelativeValue = @(parallaxDepth);
-        motionEffect.minimumRelativeValue = @(-parallaxDepth);
-    }
     parallaxGroup.motionEffects = motionEffects;
 }
 

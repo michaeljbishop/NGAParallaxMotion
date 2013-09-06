@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152A230317D9BF6200DB3FA9 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 152A230217D9BF6200DB3FA9 /* bg.png */; };
+		152A230817D9C47800DB3FA9 /* MWInterpollationMotionEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 152A230617D9C47800DB3FA9 /* MWInterpollationMotionEffect.m */; };
 		AA33B3BD17864DAB0009E5C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA33B3BC17864DAB0009E5C3 /* Foundation.framework */; };
 		AA33B3BF17864DAB0009E5C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA33B3BE17864DAB0009E5C3 /* CoreGraphics.framework */; };
 		AA33B3C117864DAB0009E5C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA33B3C017864DAB0009E5C3 /* UIKit.framework */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		152A230217D9BF6200DB3FA9 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		152A230517D9C47800DB3FA9 /* MWInterpollationMotionEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWInterpollationMotionEffect.h; sourceTree = "<group>"; };
+		152A230617D9C47800DB3FA9 /* MWInterpollationMotionEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWInterpollationMotionEffect.m; sourceTree = "<group>"; };
 		AA33B3B917864DAB0009E5C3 /* NGAParallaxMotion Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NGAParallaxMotion Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA33B3BC17864DAB0009E5C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AA33B3BE17864DAB0009E5C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,11 +88,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		152A230417D9C47800DB3FA9 /* MWInterpollationMotionEffect */ = {
+			isa = PBXGroup;
+			children = (
+				152A230517D9C47800DB3FA9 /* MWInterpollationMotionEffect.h */,
+				152A230617D9C47800DB3FA9 /* MWInterpollationMotionEffect.m */,
+			);
+			path = MWInterpollationMotionEffect;
+			sourceTree = "<group>";
+		};
 		AA33B3B017864DAB0009E5C3 = {
 			isa = PBXGroup;
 			children = (
-				AA33B3F417864DD20009E5C3 /* UIView+NGAParallaxMotion.m */,
 				AA33B3F517864DD20009E5C3 /* UIView+NGAParallaxMotion.h */,
+				AA33B3F417864DD20009E5C3 /* UIView+NGAParallaxMotion.m */,
+				152A230417D9C47800DB3FA9 /* MWInterpollationMotionEffect */,
 				AA33B3C217864DAB0009E5C3 /* App */,
 				AA33B3E417864DAB0009E5C3 /* NGAParallaxMotion DemoTests */,
 				AA33B3BB17864DAB0009E5C3 /* Frameworks */,
@@ -123,6 +138,7 @@
 				AA33B3CE17864DAB0009E5C3 /* Main_iPhone.storyboard */,
 				AA33B3D417864DAB0009E5C3 /* NGAViewController.h */,
 				AA33B3D517864DAB0009E5C3 /* NGAViewController.m */,
+				152A230217D9BF6200DB3FA9 /* bg.png */,
 				AA33B3D717864DAB0009E5C3 /* Images.xcassets */,
 				AA33B3C317864DAB0009E5C3 /* Supporting Files */,
 			);
@@ -238,6 +254,7 @@
 			files = (
 				AA33B3D817864DAB0009E5C3 /* Images.xcassets in Resources */,
 				AA33B3D017864DAB0009E5C3 /* Main_iPhone.storyboard in Resources */,
+				152A230317D9BF6200DB3FA9 /* bg.png in Resources */,
 				AA33B3C717864DAB0009E5C3 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +278,7 @@
 				AA33B3D617864DAB0009E5C3 /* NGAViewController.m in Sources */,
 				AA33B3F617864DD20009E5C3 /* UIView+NGAParallaxMotion.m in Sources */,
 				AA33B3CD17864DAB0009E5C3 /* NGAAppDelegate.m in Sources */,
+				152A230817D9C47800DB3FA9 /* MWInterpollationMotionEffect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

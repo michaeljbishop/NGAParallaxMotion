@@ -1,0 +1,3 @@
+[submodule "MWInterpollationMotionEffect"]
+	path = MWInterpollationMotionEffect
+	url = git@github.com:Przytua/MWInterpollationMotionEffect.git

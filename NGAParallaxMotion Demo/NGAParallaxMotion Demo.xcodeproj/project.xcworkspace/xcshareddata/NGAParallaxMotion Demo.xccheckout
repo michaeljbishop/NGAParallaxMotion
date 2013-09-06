@@ -2,35 +2,47 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>628FF67F-53CA-4808-8748-5F7D7AA0931E</string>
+	<string>AB90D243-9EC6-4E7E-8CBA-8711101869AA</string>
 	<key>IDESourceControlProjectName</key>
 	<string>NGAParallaxMotion Demo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>90B6A928-CA09-4709-9E41-221BAC14834E</key>
-		<string>https://github.com/michaeljbishop/UIView-NGAParallaxMotion.git</string>
+		<key>A52A988F-1C86-4D1C-BC55-D34B9AED879F</key>
+		<string>ssh://github.com/Przytua/UIView-NGAParallaxMotion.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>NGAParallaxMotion Demo/NGAParallaxMotion Demo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>90B6A928-CA09-4709-9E41-221BAC14834E</key>
+		<key>487A8C5A-0B92-49E7-93EE-C820EC35C6DC</key>
+		<string>../../MWInterpollationMotionEffect</string>
+		<key>A52A988F-1C86-4D1C-BC55-D34B9AED879F</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/michaeljbishop/UIView-NGAParallaxMotion.git</string>
+	<string>ssh://github.com/Przytua/UIView-NGAParallaxMotion.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>90B6A928-CA09-4709-9E41-221BAC14834E</string>
+	<string>A52A988F-1C86-4D1C-BC55-D34B9AED879F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>90B6A928-CA09-4709-9E41-221BAC14834E</string>
+			<string>487A8C5A-0B92-49E7-93EE-C820EC35C6DC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MWInterpollationMotionEffect</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A52A988F-1C86-4D1C-BC55-D34B9AED879F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>UIView-NGAParallaxMotion</string>
 		</dict>
