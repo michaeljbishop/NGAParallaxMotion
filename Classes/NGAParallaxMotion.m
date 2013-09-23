@@ -1,5 +1,5 @@
 //
-//  UIView+ParallaxMotion.m
+//  NGAParallaxMotion.m
 //
 //  Created by Michael Bishop on 7/4/13.
 //  Copyright (c) 2013 Numerical Garden. All rights reserved.
@@ -19,7 +19,7 @@ static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionE
         return;
     
     objc_setAssociatedObject(self, (__bridge const void *)(kNGAParallaxDepthKey), @(parallaxDepth), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
+
     if (parallaxDepth == 0.0)
     {
         [self removeMotionEffect:[self nga_parallaxMotionEffectGroup]];
@@ -68,7 +68,6 @@ static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionE
     objc_setAssociatedObject(self, (__bridge const void *)(kNGAParallaxMotionEffectGroupKey), group, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     NSAssert( group == objc_getAssociatedObject(self, (__bridge const void *)(kNGAParallaxMotionEffectGroupKey)), @"set didn't work" );
 }
-
 @end
 
 
