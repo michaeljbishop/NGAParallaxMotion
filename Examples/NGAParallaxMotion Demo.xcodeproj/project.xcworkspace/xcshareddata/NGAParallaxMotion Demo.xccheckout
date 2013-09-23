@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>628FF67F-53CA-4808-8748-5F7D7AA0931E</string>
+	<string>965D306C-1F60-490E-9CD2-2647A642D7E2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>NGAParallaxMotion Demo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -12,7 +14,7 @@
 		<string>https://github.com/michaeljbishop/UIView-NGAParallaxMotion.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>NGAParallaxMotion Demo/NGAParallaxMotion Demo.xcodeproj/project.xcworkspace</string>
+	<string>Examples/NGAParallaxMotion Demo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>90B6A928-CA09-4709-9E41-221BAC14834E</key>

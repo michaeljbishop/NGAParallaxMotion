@@ -21,8 +21,8 @@
 		AA33B3E117864DAB0009E5C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA33B3C017864DAB0009E5C3 /* UIKit.framework */; };
 		AA33B3E917864DAB0009E5C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA33B3E717864DAB0009E5C3 /* InfoPlist.strings */; };
 		AA33B3EB17864DAB0009E5C3 /* NGAParallaxMotion_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33B3EA17864DAB0009E5C3 /* NGAParallaxMotion_DemoTests.m */; };
-		AA33B3F617864DD20009E5C3 /* UIView+NGAParallaxMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33B3F417864DD20009E5C3 /* UIView+NGAParallaxMotion.m */; };
-		AA33B3F717864DD20009E5C3 /* UIView+NGAParallaxMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = AA33B3F417864DD20009E5C3 /* UIView+NGAParallaxMotion.m */; };
+		AA5B402417EFDA9C00FAEACF /* NGAParallaxMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5B402317EFDA9C00FAEACF /* NGAParallaxMotion.m */; };
+		AA5B402517EFDA9C00FAEACF /* NGAParallaxMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5B402317EFDA9C00FAEACF /* NGAParallaxMotion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 		AA33B3E617864DAB0009E5C3 /* NGAParallaxMotion DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NGAParallaxMotion DemoTests-Info.plist"; sourceTree = "<group>"; };
 		AA33B3E817864DAB0009E5C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AA33B3EA17864DAB0009E5C3 /* NGAParallaxMotion_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGAParallaxMotion_DemoTests.m; sourceTree = "<group>"; };
-		AA33B3F417864DD20009E5C3 /* UIView+NGAParallaxMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+NGAParallaxMotion.m"; path = "../UIView+NGAParallaxMotion.m"; sourceTree = "<group>"; };
-		AA33B3F517864DD20009E5C3 /* UIView+NGAParallaxMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+NGAParallaxMotion.h"; path = "../UIView+NGAParallaxMotion.h"; sourceTree = "<group>"; };
+		AA5B402217EFDA9C00FAEACF /* NGAParallaxMotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGAParallaxMotion.h; sourceTree = "<group>"; };
+		AA5B402317EFDA9C00FAEACF /* NGAParallaxMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGAParallaxMotion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +86,7 @@
 		AA33B3B017864DAB0009E5C3 = {
 			isa = PBXGroup;
 			children = (
-				AA33B3F417864DD20009E5C3 /* UIView+NGAParallaxMotion.m */,
-				AA33B3F517864DD20009E5C3 /* UIView+NGAParallaxMotion.h */,
+				AA5B402117EFDA9C00FAEACF /* Classes */,
 				AA33B3C217864DAB0009E5C3 /* App */,
 				AA33B3E417864DAB0009E5C3 /* NGAParallaxMotion DemoTests */,
 				AA33B3BB17864DAB0009E5C3 /* Frameworks */,
@@ -157,6 +156,16 @@
 				AA33B3E717864DAB0009E5C3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA5B402117EFDA9C00FAEACF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AA5B402217EFDA9C00FAEACF /* NGAParallaxMotion.h */,
+				AA5B402317EFDA9C00FAEACF /* NGAParallaxMotion.m */,
+			);
+			name = Classes;
+			path = ../Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +268,8 @@
 			files = (
 				AA33B3C917864DAB0009E5C3 /* main.m in Sources */,
 				AA33B3D617864DAB0009E5C3 /* NGAViewController.m in Sources */,
-				AA33B3F617864DD20009E5C3 /* UIView+NGAParallaxMotion.m in Sources */,
 				AA33B3CD17864DAB0009E5C3 /* NGAAppDelegate.m in Sources */,
+				AA5B402417EFDA9C00FAEACF /* NGAParallaxMotion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,8 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA33B3F717864DD20009E5C3 /* UIView+NGAParallaxMotion.m in Sources */,
 				AA33B3EB17864DAB0009E5C3 /* NGAParallaxMotion_DemoTests.m in Sources */,
+				AA5B402517EFDA9C00FAEACF /* NGAParallaxMotion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

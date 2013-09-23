@@ -5,7 +5,7 @@
 //  Copyright (c) 2013 Numerical Garden. All rights reserved.
 //
 
-#import "UIView+NGAParallaxMotion.h"
+#import "NGAParallaxMotion.h"
 #import <objc/runtime.h>
 
 static const NSString * kNGAParallaxDepthKey = @"kNGAParallaxDepthKey";

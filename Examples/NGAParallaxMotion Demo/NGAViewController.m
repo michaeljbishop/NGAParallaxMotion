@@ -7,7 +7,7 @@
 //
 
 #import "NGAViewController.h"
-#import "UIView+NGAParallaxMotion.h"
+#import "NGAParallaxMotion.h"
 
 @interface NGAViewController ()
 
