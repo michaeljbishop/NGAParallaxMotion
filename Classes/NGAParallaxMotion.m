@@ -13,13 +13,19 @@ static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionE
 
 @implementation UIView (NGAParallaxMotion)
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED <= __IPHONE_6_1
+#warning REQUIRES IOS7
+#endif
+
 -(void)setParallaxIntensity:(CGFloat)parallaxDepth
 {
     if (self.parallaxIntensity == parallaxDepth)
         return;
     
     objc_setAssociatedObject(self, (__bridge const void *)(kNGAParallaxDepthKey), @(parallaxDepth), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-
+    
+#if __IPHONE_OS_VERSION_MIN_REQUIRED > __IPHONE_6_1
+    
     if (parallaxDepth == 0.0)
     {
         [self removeMotionEffect:[self nga_parallaxMotionEffectGroup]];
@@ -46,6 +52,7 @@ static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionE
         motionEffect.minimumRelativeValue = @(-parallaxDepth);
     }
     parallaxGroup.motionEffects = motionEffects;
+#endif
 }
 
 -(CGFloat)parallaxIntensity
@@ -58,6 +65,8 @@ static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionE
 
 #pragma mark -
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED > __IPHONE_6_1
+
 -(UIMotionEffectGroup*)nga_parallaxMotionEffectGroup
 {
     return objc_getAssociatedObject(self, (__bridge const void *)(kNGAParallaxMotionEffectGroupKey));
@@ -68,6 +77,8 @@ static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionE
     objc_setAssociatedObject(self, (__bridge const void *)(kNGAParallaxMotionEffectGroupKey), group, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     NSAssert( group == objc_getAssociatedObject(self, (__bridge const void *)(kNGAParallaxMotionEffectGroupKey)), @"set didn't work" );
 }
+#endif
+
 @end
 
 
