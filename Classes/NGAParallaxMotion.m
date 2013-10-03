@@ -8,13 +8,13 @@
 #import "NGAParallaxMotion.h"
 #import <objc/runtime.h>
 
-static const NSString * kNGAParallaxDepthKey = @"kNGAParallaxDepthKey";
+static void * const kNGAParallaxDepthKey = (void*)&kNGAParallaxDepthKey;
 
 @implementation UIView (NGAParallaxMotion)
 #if __IPHONE_OS_VERSION_MAX_ALLOWED < 70000
 #warning DISABLED WITHOUT IOS7 SDK
 #else
-static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionEffectGroupKey";
+static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotionEffectGroupKey;
 #endif
 
 -(void)setParallaxIntensity:(CGFloat)parallaxDepth
@@ -22,7 +22,7 @@ static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionE
     if (self.parallaxIntensity == parallaxDepth)
         return;
     
-    objc_setAssociatedObject(self, (__bridge const void *)(kNGAParallaxDepthKey), @(parallaxDepth), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, kNGAParallaxDepthKey, @(parallaxDepth), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
   
@@ -61,7 +61,7 @@ static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionE
 
 -(CGFloat)parallaxIntensity
 {
-    NSNumber * val = objc_getAssociatedObject(self, (__bridge const void *)(kNGAParallaxDepthKey));
+    NSNumber * val = objc_getAssociatedObject(self, kNGAParallaxDepthKey);
     if (!val)
         return 0.0;
     return val.doubleValue;
@@ -73,13 +73,13 @@ static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionE
 
 -(UIMotionEffectGroup*)nga_parallaxMotionEffectGroup
 {
-    return objc_getAssociatedObject(self, (__bridge const void *)(kNGAParallaxMotionEffectGroupKey));
+    return objc_getAssociatedObject(self, kNGAParallaxMotionEffectGroupKey);
 }
 
 -(void)nga_setParallaxMotionEffectGroup:(UIMotionEffectGroup*)group
 {
-    objc_setAssociatedObject(self, (__bridge const void *)(kNGAParallaxMotionEffectGroupKey), group, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    NSAssert( group == objc_getAssociatedObject(self, (__bridge const void *)(kNGAParallaxMotionEffectGroupKey)), @"set didn't work" );
+    objc_setAssociatedObject(self, kNGAParallaxMotionEffectGroupKey, group, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    NSAssert( group == objc_getAssociatedObject(self, kNGAParallaxMotionEffectGroupKey), @"set didn't work" );
 }
 #endif
 
