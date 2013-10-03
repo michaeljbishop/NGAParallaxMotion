@@ -9,12 +9,12 @@
 #import <objc/runtime.h>
 
 static const NSString * kNGAParallaxDepthKey = @"kNGAParallaxDepthKey";
-static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionEffectGroupKey";
 
 @implementation UIView (NGAParallaxMotion)
-
-#if __IPHONE_OS_VERSION_MIN_REQUIRED <= __IPHONE_6_1
-#warning REQUIRES IOS7
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 70000
+#warning DISABLED WITHOUT IOS7 SDK
+#else
+static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionEffectGroupKey";
 #endif
 
 -(void)setParallaxIntensity:(CGFloat)parallaxDepth
@@ -24,8 +24,12 @@ static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionE
     
     objc_setAssociatedObject(self, (__bridge const void *)(kNGAParallaxDepthKey), @(parallaxDepth), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
-#if __IPHONE_OS_VERSION_MIN_REQUIRED > __IPHONE_6_1
-    
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
+  
+    // skip this part if pre-iOS7
+    if (![UIInterpolatingMotionEffect class])
+        return;
+        
     if (parallaxDepth == 0.0)
     {
         [self removeMotionEffect:[self nga_parallaxMotionEffectGroup]];
@@ -65,7 +69,7 @@ static const NSString * kNGAParallaxMotionEffectGroupKey = @"kNGAParallaxMotionE
 
 #pragma mark -
 
-#if __IPHONE_OS_VERSION_MIN_REQUIRED > __IPHONE_6_1
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
 
 -(UIMotionEffectGroup*)nga_parallaxMotionEffectGroup
 {
