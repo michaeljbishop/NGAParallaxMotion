@@ -38,12 +38,7 @@ static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotio
     }
 
     UIMotionEffectGroup * parallaxGroup = [self nga_parallaxMotionEffectGroup];
-    if (!parallaxGroup)
-    {
-        parallaxGroup = [[UIMotionEffectGroup alloc] init];
-        [self nga_setParallaxMotionEffectGroup:parallaxGroup];
-        [self addMotionEffect:parallaxGroup];
-    }
+    [self addMotionEffect:parallaxGroup];
     
     UIInterpolatingMotionEffect *xAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
     UIInterpolatingMotionEffect *yAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
@@ -67,12 +62,18 @@ static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotio
     return val.doubleValue;
 }
 
-#pragma mark -
+#pragma mark - EffectGroupKey access methods
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
 
 -(UIMotionEffectGroup*)nga_parallaxMotionEffectGroup
 {
+    if (!objc_getAssociatedObject(self, kNGAParallaxMotionEffectGroupKey))
+    {
+        UIMotionEffectGroup * parallaxGroup = [[UIMotionEffectGroup alloc] init];
+        [self nga_setParallaxMotionEffectGroup:parallaxGroup];
+        return parallaxGroup;
+    }
     return objc_getAssociatedObject(self, kNGAParallaxMotionEffectGroupKey);
 }
 
