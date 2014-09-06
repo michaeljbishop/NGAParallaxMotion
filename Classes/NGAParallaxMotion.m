@@ -19,6 +19,11 @@ static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotio
 
 -(void)setParallaxIntensity:(CGFloat)parallaxDepth
 {
+    [self setParallaxIntensity:parallaxDepth direction:NGAParallaxMotionDirectionAll];
+}
+
+-(void)setParallaxIntensity:(CGFloat)parallaxDepth direction:(NGAParallaxMotionDirection)direction{
+
     if (self.parallaxIntensity == parallaxDepth)
         return;
     
@@ -48,7 +53,14 @@ static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotio
     UIInterpolatingMotionEffect *xAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
     UIInterpolatingMotionEffect *yAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
     
-    NSArray * motionEffects = @[xAxis, yAxis];
+    NSArray * motionEffects;
+    if (direction == NGAParallaxMotionDirectionVertical){
+        motionEffects = @[yAxis];
+    } else if (direction == NGAParallaxMotionDirectionHorizontal){
+        motionEffects = @[xAxis];
+    } else{
+        motionEffects = @[xAxis, yAxis];
+    }
 
     for (UIInterpolatingMotionEffect * motionEffect in motionEffects )
     {
