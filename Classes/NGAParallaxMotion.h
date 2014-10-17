@@ -15,7 +15,6 @@ typedef NS_ENUM(NSInteger, NGAParallaxMotionDirection) {
 };
 
 
-
 @interface UIView (NGAParallaxMotion)
 
 // Positive values make the view appear to be above the surface
@@ -26,9 +25,5 @@ typedef NS_ENUM(NSInteger, NGAParallaxMotionDirection) {
 // When filled up, will restrict the parallax to a certain direction only
 // Default to NGAParallaxMotionDirectionAll
 @property (nonatomic) NGAParallaxMotionDirection parallaxDirectionConstraint;
-
-
-- (void)setParallaxIntensity:(CGFloat)parallaxDepth;
-- (void)setParallaxDirectionConstraint:(NGAParallaxMotionDirection)parallaxConstraint;
 
 @end

@@ -38,11 +38,10 @@ static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotio
 
 
 -(void)updateParallaxIntensityAndDirection{
-
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
+    
     CGFloat parallaxDepth = self.parallaxIntensity;
     NGAParallaxMotionDirection direction = self.parallaxDirectionConstraint;
-    
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
   
     // skip this part if pre-iOS7
     if (![UIInterpolatingMotionEffect class])
