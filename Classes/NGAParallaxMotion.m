@@ -9,6 +9,7 @@
 #import <objc/runtime.h>
 
 static void * const kNGAParallaxDepthKey = (void*)&kNGAParallaxDepthKey;
+static void * const kNGAParallaxConstraintKey = (void*)&kNGAParallaxConstraintKey;
 
 @implementation UIView (NGAParallaxMotion)
 #if __IPHONE_OS_VERSION_MAX_ALLOWED < 70000
@@ -19,15 +20,27 @@ static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotio
 
 -(void)setParallaxIntensity:(CGFloat)parallaxDepth
 {
-    [self setParallaxIntensity:parallaxDepth direction:NGAParallaxMotionDirectionAll];
-}
-
--(void)setParallaxIntensity:(CGFloat)parallaxDepth direction:(NGAParallaxMotionDirection)direction{
-
+    
     if (self.parallaxIntensity == parallaxDepth)
         return;
     
     objc_setAssociatedObject(self, kNGAParallaxDepthKey, @(parallaxDepth), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    [self updateParallaxIntensityAndDirection];
+}
+
+- (void)setParallaxDirectionConstraint:(NGAParallaxMotionDirection)parallaxConstraint{
+    
+    objc_setAssociatedObject(self, kNGAParallaxConstraintKey, @(parallaxConstraint), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    [self updateParallaxIntensityAndDirection];
+}
+
+
+-(void)updateParallaxIntensityAndDirection{
+
+    CGFloat parallaxDepth = self.parallaxIntensity;
+    NGAParallaxMotionDirection direction = self.parallaxDirectionConstraint;
     
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
   
@@ -77,6 +90,13 @@ static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotio
     if (!val)
         return 0.0;
     return val.doubleValue;
+}
+
+- (NGAParallaxMotionDirection)parallaxDirectionConstraint{
+    NSNumber *val = objc_getAssociatedObject(self, kNGAParallaxConstraintKey);
+    if (!val)
+        return NGAParallaxMotionDirectionAll;
+    return val.integerValue;
 }
 
 #pragma mark -

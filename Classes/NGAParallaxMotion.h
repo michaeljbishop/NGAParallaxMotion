@@ -23,6 +23,12 @@ typedef NS_ENUM(NSInteger, NGAParallaxMotionDirection) {
 // The unit is in points
 @property (nonatomic) CGFloat parallaxIntensity;
 
-- (void)setParallaxIntensity:(CGFloat)parallaxDepth direction:(NGAParallaxMotionDirection)direction;
+// When filled up, will restrict the parallax to a certain direction only
+// Default to NGAParallaxMotionDirectionAll
+@property (nonatomic) NGAParallaxMotionDirection parallaxDirectionConstraint;
+
+
+- (void)setParallaxIntensity:(CGFloat)parallaxDepth;
+- (void)setParallaxDirectionConstraint:(NGAParallaxMotionDirection)parallaxConstraint;
 
 @end
