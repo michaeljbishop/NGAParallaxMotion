@@ -10,5 +10,4 @@ Pod::Spec.new do |s|
   s.framework    = 'UIKit'
   s.source_files = 'Classes'
   s.requires_arc =  true
-  s.screenshots  = "img/off", "img/on"
 end
