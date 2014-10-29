@@ -12,6 +12,7 @@
 @interface NGAViewController ()
 
 @property (strong, nonatomic) IBOutlet UISwitch *parallaxSwitch;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *parallaxConstraintControl;
 @property (strong, nonatomic) IBOutlet UILabel *midLabel;
 @property (strong, nonatomic) NSArray * labels;
 @end
@@ -31,6 +32,7 @@
             [labels addObject:view];
     }
     self.labels = labels;
+    self.parallaxConstraintControl.enabled = self.parallaxSwitch.isOn;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,14 +46,30 @@
     UISwitch * uisswitch = (UISwitch*)sender;
     if (uisswitch.isOn)
     {
+        self.parallaxConstraintControl.enabled = YES;
         CGFloat baseFontSize = self.midLabel.font.pointSize;
         for (UILabel * label in self.labels)
+        {
             label.parallaxIntensity = label.font.pointSize - baseFontSize;
+            label.parallaxDirectionConstraint = self.parallaxConstraintControl.selectedSegmentIndex;
+        }
     }
     else
     {
+        self.parallaxConstraintControl.enabled = NO;
         for (UILabel * label in self.labels)
+        {
             label.parallaxIntensity = 0.0;
+        }
+    }
+}
+
+-(IBAction)setConstraintFromSender:(id)sender
+{
+    UISegmentedControl * control = (UISegmentedControl*)sender;
+    for (UILabel * label in self.labels)
+    {
+        label.parallaxDirectionConstraint = control.selectedSegmentIndex;
     }
 }
 
