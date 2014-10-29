@@ -8,10 +8,10 @@
 #import <UIKit/UIKit.h>
 
 
-typedef NS_ENUM(NSInteger, NGAParallaxMotionDirection) {
-    NGAParallaxMotionDirectionAll   = 0,
-    NGAParallaxMotionDirectionHorizontal      = 1,
-    NGAParallaxMotionDirectionVertical   = 2,
+typedef NS_ENUM(NSInteger, NGAParallaxDirectionConstraint) {
+    NGAParallaxDirectionConstraintAll = 0,
+    NGAParallaxDirectionConstraintHorizontal,
+    NGAParallaxDirectionConstraintVertical
 };
 
 
@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, NGAParallaxMotionDirection) {
 @property (nonatomic) CGFloat parallaxIntensity;
 
 // When filled up, will restrict the parallax to a certain direction only
-// Default to NGAParallaxMotionDirectionAll
-@property (nonatomic) NGAParallaxMotionDirection parallaxDirectionConstraint;
+// Default to NGAParallaxDirectionConstraintAll
+@property (nonatomic) NGAParallaxDirectionConstraint parallaxDirectionConstraint;
 
 @end

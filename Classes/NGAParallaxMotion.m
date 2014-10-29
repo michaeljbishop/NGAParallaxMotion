@@ -9,13 +9,13 @@
 #import <objc/runtime.h>
 
 static void * const kNGAParallaxDepthKey = (void*)&kNGAParallaxDepthKey;
-static void * const kNGAParallaxConstraintKey = (void*)&kNGAParallaxConstraintKey;
+static void * const kNGAParallaxDirectionConstraintKey = (void*)&kNGAParallaxDirectionConstraintKey;
+static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotionEffectGroupKey;
 
 @implementation UIView (NGAParallaxMotion)
+
 #if __IPHONE_OS_VERSION_MAX_ALLOWED < 70000
 #warning DISABLED WITHOUT IOS7 SDK
-#else
-static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotionEffectGroupKey;
 #endif
 
 -(void)setParallaxIntensity:(CGFloat)parallaxDepth
@@ -29,9 +29,10 @@ static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotio
     [self updateParallaxIntensityAndDirection];
 }
 
-- (void)setParallaxDirectionConstraint:(NGAParallaxMotionDirection)parallaxConstraint{
+
+- (void)setParallaxDirectionConstraint:(NGAParallaxDirectionConstraint)parallaxConstraint{
     
-    objc_setAssociatedObject(self, kNGAParallaxConstraintKey, @(parallaxConstraint), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, kNGAParallaxDirectionConstraintKey, @(parallaxConstraint), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     [self updateParallaxIntensityAndDirection];
 }
@@ -41,7 +42,7 @@ static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotio
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
     
     CGFloat parallaxDepth = self.parallaxIntensity;
-    NGAParallaxMotionDirection direction = self.parallaxDirectionConstraint;
+    NGAParallaxDirectionConstraint direction = self.parallaxDirectionConstraint;
   
     // skip this part if pre-iOS7
     if (![UIInterpolatingMotionEffect class])
@@ -66,9 +67,9 @@ static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotio
     UIInterpolatingMotionEffect *yAxis = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
     
     NSArray * motionEffects;
-    if (direction == NGAParallaxMotionDirectionVertical){
+    if (direction == NGAParallaxDirectionConstraintVertical){
         motionEffects = @[yAxis];
-    } else if (direction == NGAParallaxMotionDirectionHorizontal){
+    } else if (direction == NGAParallaxDirectionConstraintHorizontal){
         motionEffects = @[xAxis];
     } else{
         motionEffects = @[xAxis, yAxis];
@@ -91,10 +92,10 @@ static void * const kNGAParallaxMotionEffectGroupKey = (void*)&kNGAParallaxMotio
     return val.doubleValue;
 }
 
-- (NGAParallaxMotionDirection)parallaxDirectionConstraint{
-    NSNumber *val = objc_getAssociatedObject(self, kNGAParallaxConstraintKey);
+- (NGAParallaxDirectionConstraint)parallaxDirectionConstraint{
+    NSNumber *val = objc_getAssociatedObject(self, kNGAParallaxDirectionConstraintKey);
     if (!val)
-        return NGAParallaxMotionDirectionAll;
+        return NGAParallaxDirectionConstraintAll;
     return val.integerValue;
 }
 
