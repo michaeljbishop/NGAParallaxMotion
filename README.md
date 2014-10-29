@@ -32,13 +32,23 @@ Examples
 
 ### On
 
-![](img/off.jpg)
+![](img/on.png)
 
 ### Off
 
-![](img/on.jpg)
+![](img/off.png)
 
 
-
+License
+-------
 This code is under the MIT license.
 
+
+Release Notes
+-------------
+
+### 1.1
+- Added new direction constraints (Thanks @arunaharsa!)
+
+### 1.0
+- Initial Release
