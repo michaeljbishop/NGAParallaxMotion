@@ -11,9 +11,9 @@
 
 @interface NGAViewController ()
 
-@property (strong, nonatomic) IBOutlet UISwitch *parallaxSwitch;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *parallaxConstraintControl;
-@property (strong, nonatomic) IBOutlet UILabel *midLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *parallaxSwitch;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *parallaxConstraintControl;
+@property (weak, nonatomic) IBOutlet UILabel *midLabel;
 @property (strong, nonatomic) NSArray * labels;
 @end
 
